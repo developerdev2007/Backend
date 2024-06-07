@@ -13,7 +13,7 @@ const protectRoute = async (req, res, next) => {
     next();
   } catch (err) {
     res.status(500).json({ error: err.message });
-    console.log("Error in signupUser: ", err.message);
+    console.log(err.message);
   }
 };
 export default protectRoute;
